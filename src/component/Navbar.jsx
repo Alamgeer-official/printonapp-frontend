@@ -53,7 +53,7 @@ export function Navbar() {
                 >
                   {item.name}
                   <span>
-                    <ChevronDown className="ml-2 h-4 w-4" />
+                    {/* <ChevronDown className="ml-2 h-4 w-4" /> */}
                   </span>
                 </a>
               </li>
