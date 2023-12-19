@@ -1,8 +1,8 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import BrandLogo from "../assets/printonapp.png";
+import BrandLogo from "../../assets/printonapp.png";
 
-export function Signin() {
+export function Signup() {
   return (
     <section>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
@@ -11,20 +11,39 @@ export function Signin() {
             <img className="w-10 h-10" src={BrandLogo} alt="SVG Image" />
           </div>
           <h2 className="text-center text-2xl font-bold leading-tight text-black">
-            Sign in to your account
+            Sign up to create account
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600 ">
-            Don&apos;t have an account?{" "}
+          <p className="mt-2 text-center text-base text-gray-600">
+            Already have an account?{" "}
             <a
               href="#"
               title=""
-              className="font-semibold text-black transition-all duration-200 hover:underline"
+              className="font-medium text-black transition-all duration-200 hover:underline"
             >
-              Create a free account
+              Sign In
             </a>
           </p>
           <form action="#" method="POST" className="mt-8">
             <div className="space-y-5">
+              <div>
+                <div className="flex items-center justify-between">
+                  <label
+                    htmlFor="name"
+                    className="text-base font-medium text-gray-900"
+                  >
+                    {" "}
+                    Full Name{" "}
+                  </label>
+                </div>
+                <div className="mt-2">
+                  <input
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    type="text"
+                    placeholder="Full Name"
+                    id="name"
+                  ></input>
+                </div>
+              </div>
               <div>
                 <div className="flex items-center justify-between">
                   <label
@@ -47,26 +66,19 @@ export function Signin() {
               <div>
                 <div className="flex items-center justify-between">
                   <label
-                    htmlFor=""
+                    htmlFor="password"
                     className="text-base font-medium text-gray-900"
                   >
                     {" "}
                     Password{" "}
                   </label>
-                  <a
-                    href="#"
-                    title=""
-                    className="text-sm font-semibold text-black hover:underline"
-                  >
-                    {" "}
-                    Forgot password?{" "}
-                  </a>
                 </div>
                 <div className="mt-2">
                   <input
                     className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="password"
                     placeholder="Password"
+                    id="password"
                   ></input>
                 </div>
               </div>
@@ -75,7 +87,7 @@ export function Signin() {
                   type="button"
                   className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                 >
-                  Get started <ArrowRight className="ml-2" size={16} />
+                  Create Account <ArrowRight className="ml-2" size={16} />
                 </button>
               </div>
             </div>

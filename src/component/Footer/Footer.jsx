@@ -1,5 +1,5 @@
 import React from 'react'
-import BrandLogo from '../assets/printonapp.png';
+import BrandLogo from '../../assets/printonapp.png';
 
 export function Footer() {
   return (

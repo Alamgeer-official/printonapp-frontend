@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
-import BrandLogo from "../assets/printonapp.png";
+import BrandLogo from "../../assets/printonapp.png";
 
 const menuItems = [
   {
