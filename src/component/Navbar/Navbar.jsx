@@ -1,19 +1,20 @@
 import React from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import BrandLogo from "../../assets/printonapp.png";
+import { Link,NavLink } from "react-router-dom";
 
 const menuItems = [
   {
     name: "Home",
-    href: "#",
+    to: "/home",
   },
   {
     name: "About",
-    href: "#",
+    to: "/about",
   },
   {
     name: "Contact",
-    href: "#",
+    to: "/contact",
   },
 ];
 
@@ -37,13 +38,13 @@ export function Navbar() {
           <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
+                <NavLink
+                  to={item.to}
+                  className={`inline-flex items-center text-sm font-semibold text-gray-800 hover:text-black hover:underline-offset-1 underline-bl`}
                 >
                   {item.name}
                   <span>{/* <ChevronDown className="ml-2 h-4 w-4" /> */}</span>
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -53,7 +54,9 @@ export function Navbar() {
             type="button"
             className="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
+            <Link to={"signin"}>
             Sign In
+            </Link>
           </button>
         </div>
         <div className="lg:hidden">
@@ -88,9 +91,9 @@ export function Navbar() {
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
-                      <a
+                      <NavLink
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
                       >
                         <span className="ml-3 text-base font-medium text-gray-900">
@@ -99,7 +102,7 @@ export function Navbar() {
                         <span>
                           <ChevronRight className="ml-3 h-4 w-4" />
                         </span>
-                      </a>
+                      </NavLink>
                     ))}
                   </nav>
                 </div>
