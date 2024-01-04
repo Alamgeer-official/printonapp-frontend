@@ -3,12 +3,13 @@ import { Footer } from "./Footer/Footer.jsx";
 import { Signin } from "./Signin/Signin.jsx";
 import { Signup } from "./Signup/Signup.jsx";
 import { Home } from "./Home/Home.jsx";
-import About from "./About/About.jsx";
-import Contact from "./Contact/Contact.jsx";
+import  About  from "./About/About.jsx";
+import  Contact  from "./Contact/Contact.jsx";
+import Dashboard from "./Dashboard/Dashboard.jsx";
 
 
 
 
 
 
-export{Navbar,Footer,Signin,Signup,Home,About,Contact}
+export { Navbar, Footer, Signin, Signup, Home, About, Contact, Dashboard }

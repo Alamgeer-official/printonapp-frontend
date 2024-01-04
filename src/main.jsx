@@ -2,7 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Layout from "./Layout.jsx";
 import "./index.css";
-import { Signin, Signup,Home,About,Contact } from "./component/index.js";
+import {
+  Signin,
+  Signup,
+  Home,
+  About,
+  Contact,
+  Dashboard,
+} from "./component/index.js";
 import {
   Route,
   RouterProvider,
@@ -19,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="home" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="dashboard" element={<Dashboard />} />
     </Route>
   )
 );
